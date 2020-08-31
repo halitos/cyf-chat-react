@@ -1,25 +1,19 @@
 import React from "react";
+// import chatbox from "./ChatBox"
 
-const MesssageInput = () => {
-  return (
-    <div>
-      <h2>Send a message</h2>
-      <form
-        className="d-flex-column text-center bg-info text-white p-2 mt-3"
-        action="/messages"
-        method="post"
-      >
-        <p>
-          Name: <input type="text" name="from" placeholder="Your Name" /> <br />
-          Message:{" "}
-          <input type="text" name="text" placeholder="The message..." />
-          <br />
-        </p>
-        <button type="submit">Send</button>
-      </form>
-      <a href="/messages">See all messages</a>
-    </div>
-  );
+const MesssageInput = ({ messages }) => {
+  if (messages !== undefined) {
+    return messages.map((msg, index) => {
+      return (
+        <div className="chatbox" key={index}>
+          <h5>Message No: {index + 1}</h5>
+          <p>
+            {msg.from} : {msg.text}
+          </p>
+        </div>
+      );
+    });
+  } else return null;
 };
 
 export default MesssageInput;
