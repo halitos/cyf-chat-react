@@ -41,7 +41,7 @@ const ChatBox = () => {
       <div className="chat-form">
         <form>
           <div>
-            <h4>Submit your message here please</h4>
+            <h4>Submit your message here </h4>
             <input
               className="input-from"
               id="input-from"

@@ -17,7 +17,6 @@
 }
 
 .chat-form {
-  /* background-color: aquamarine; */
   width: 30%;
   text-align: center;
 }
@@ -39,9 +38,9 @@
   border-radius: 5px;
   background-color: burlywood;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   padding: 10px;
-  width: 100px;
+  width: 80px;
   cursor: pointer;
   margin: 5px;
 }
