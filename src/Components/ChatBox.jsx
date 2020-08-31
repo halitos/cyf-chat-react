@@ -16,6 +16,8 @@ const ChatBox = () => {
 
   function handleNewMessage(e) {
     e.preventDefault(handleNewMessage);
+    const sender = document.getElementById("input-from");
+    const msg = document.getElementById("input-text");
     fetch("https://halit-chat-server.herokuapp.com/messages", {
       method: "POST",
       mode: "cors",
@@ -23,19 +25,23 @@ const ChatBox = () => {
         "Content-type": "application/json",
       },
       body: JSON.stringify({
-        from: document.getElementById("input-from").value,
-        text: document.getElementById("input-text").value,
+        from: sender.value,
+        text: msg.value,
       }),
     })
       .then((res) => res.json())
       .then((data) => setMessages(data));
+
+    sender.value = "";
+    msg.value = "";
   }
 
   return (
-    <div className="all-messages-container">
-      <div className="chat">
+    <div className="msg-container">
+      <div className="chat-form">
         <form>
           <div>
+            <h4>Type your message here please</h4>
             <input
               className="input-from"
               id="input-from"
@@ -49,8 +55,9 @@ const ChatBox = () => {
               id="input-text"
               type="text"
               placeholder="Enter your message"
+              rows="10"
               wrap="soft"
-            />{" "}
+            />
           </div>
           <button
             className="send-button"
@@ -61,7 +68,10 @@ const ChatBox = () => {
           </button>
         </form>
       </div>
-      <MesssageInput messages={messages} />
+      <div className="messages">
+        <h4 className="sub-heading">See the messages posted</h4>
+        <MesssageInput messages={messages} />
+      </div>
     </div>
   );
 };

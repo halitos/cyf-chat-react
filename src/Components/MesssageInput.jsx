@@ -1,12 +1,12 @@
 import React from "react";
-// import chatbox from "./ChatBox"
 
 const MesssageInput = ({ messages }) => {
   if (messages !== undefined) {
-    return messages.map((msg, index) => {
+    let sortedMessages = messages.reverse();
+    return sortedMessages.map((msg, index) => {
       return (
         <div className="chatbox" key={index}>
-          <h5>Message No: {index + 1}</h5>
+          <h5>Message No: {sortedMessages.length - index}</h5>
           <p>
             {msg.from} : {msg.text}
           </p>

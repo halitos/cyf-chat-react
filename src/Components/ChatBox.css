@@ -1,6 +1,35 @@
 .chatbox {
   background-color: burlywood;
-  width: 60%;
   padding: 20px;
   margin: 10px;
+}
+
+.msg-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.chat-form {
+  /* background-color: aquamarine; */
+  width: 30%;
+  text-align: center;
+}
+
+.input-from {
+  width: 80%;
+  padding: 5px;
+}
+.input-text {
+  width: 80%;
+  padding: 5px;
+}
+
+.sub-heading {
+  text-align: center;
 }
