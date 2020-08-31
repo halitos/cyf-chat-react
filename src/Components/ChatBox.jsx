@@ -17,11 +17,10 @@ const ChatBox = () => {
     return message.map((msg, index) => {
       return (
         <div className="chatbox" key={index}>
-          <h5>Enter your message here please</h5>
-          <p> from: {msg.from}</p>
-          <p> message: {msg.text}</p>
-          <button>submit</button>
-          <button>delete</button>
+          <h5>Message No: {index + 1}</h5>
+          <p>
+            {msg.from} : {msg.text}
+          </p>
         </div>
       );
     });

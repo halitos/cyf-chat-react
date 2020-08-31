@@ -5,7 +5,7 @@ import ChatBox from "./ChatBox";
 const ChatDisplay = () => {
   return (
     <div className="container">
-      <h3>This will be container for chat boxes</h3>
+      <h3>You are seeing the latest messages</h3>
       <ChatBox />
     </div>
   );
