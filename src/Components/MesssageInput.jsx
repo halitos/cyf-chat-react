@@ -4,7 +4,11 @@ const MesssageInput = () => {
   return (
     <div>
       <h2>Send a message</h2>
-      <form action="/messages" method="post">
+      <form
+        className="d-flex-column text-center bg-info text-white p-2 mt-3"
+        action="/messages"
+        method="post"
+      >
         <p>
           Name: <input type="text" name="from" placeholder="Your Name" /> <br />
           Message:{" "}
