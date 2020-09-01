@@ -6,7 +6,7 @@ import MesssageInput from "./Components/MesssageInput";
 function App() {
   return (
     <div className="App">
-      <h1> Chit-Chat </h1>
+      <h1 className="header"> Chit-Chat </h1>
       <ChatBox />
       <MesssageInput />
     </div>

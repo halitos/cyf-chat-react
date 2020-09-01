@@ -30,7 +30,8 @@
   border-radius: 5px;
 }
 
-.sub-heading {
+.sub-heading,
+.header {
   text-align: center;
 }
 
